@@ -18,5 +18,11 @@
         android:id="@+id/stationsDetailsFragment"
         android:name="com.digikraft.bikestation.ui.home.StationsDetailsFragment"
         android:label="fragment_station_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="feature"
+            app:argType="com.digikraft.bikestation.model.bike.Feature"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>

@@ -83,7 +83,8 @@ class StationsFragment : Fragment(), StationAdapter.ItemClickLister {
     }
 
     override fun itemClick(feature: Feature) {
-        findNavController().navigate(R.id.stationsFragment_to_stationsDetailsFragment)
+        val direction = StationsFragmentDirections.stationsFragmentToStationsDetailsFragment(feature = feature)
+        findNavController().navigate(direction)
     }
 
 }
