@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -18,7 +20,9 @@ android {
         targetSdk 32
         versionCode 1
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        setProperty("archivesBaseName", "bike-station-digikraft-v" + defaultConfig.versionName + "_" + defaultConfig.versionCode + "-" + new Date().format('yyyyMMdd'))
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -38,6 +42,22 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        staging {
+            dimension "default"
+            buildConfigField "String", "BASE_URL", "\"https://www.poznan.pl/\""
+            resValue "string", "map_key", "AIzaSyDcNCdNkUfu0IPWqdE6woVz9sL2jbrPHbs"
+            versionNameSuffix "-RC1"
+        }
+        live {
+            dimension "default"
+            buildConfigField "String", "BASE_URL", "\"https://www.poznan.pl/\""
+            resValue "string", "map_key", "AIzaSyDcNCdNkUfu0IPWqdE6woVz9sL2jbrPHbs"
+        }
+    }
 }
 
 dependencies {
@@ -51,7 +71,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //navigation component
-    def nav_version = "2.5.0"
+    def nav_version = "2.5.2"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
@@ -79,15 +99,19 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:4.9.3"
     implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
 
-    //coil-image-loading
-    def coil_version = "2.2.0"
-    implementation("io.coil-kt:coil:$coil_version")
-    implementation("io.coil-kt:coil-svg:$coil_version")
-
     // Hilt
-    def hilt_version = '2.38.1'
-    def hilt_view_models_version = '1.0.0-alpha03'
+    def hilt_version = '2.44'
     implementation "com.google.dagger:hilt-android:$hilt_version"
-    annotationProcessor "com.google.dagger:hilt-android-compiler:$hilt_version"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_view_models_version"
+    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+
+    //Google map
+    def map_version = "18.1.0"
+    implementation "com.google.android.gms:play-services-maps:$map_version"
+
+}
+
+//kotlin-kept-used-for annotation
+//used with hilt dependency
+kapt {
+    correctErrorTypes true
 }

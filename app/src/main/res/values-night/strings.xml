@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="tv_bike_station">Bike Station</string>
+    <string name="tv_available_bikes">Available bikes</string>
+    <string name="tv_available_places">Available Places</string>
 </resources>

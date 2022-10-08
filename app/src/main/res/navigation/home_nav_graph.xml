@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/stationsFragment">
+
+    <fragment
+        android:id="@+id/stationsFragment"
+        android:name="com.digikraft.bikestation.ui.home.StationsFragment"
+        android:label="fragment_station"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/stationsFragment_to_stationsDetailsFragment"
+            app:destination="@id/stationsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stationsDetailsFragment"
+        android:name="com.digikraft.bikestation.ui.home.StationsDetailsFragment"
+        android:label="fragment_station_details"
+        tools:layout="@layout/fragment_details" />
+</navigation>
