@@ -4,12 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.digikraft.bikestation.R
 import com.digikraft.bikestation.databinding.FragmentMainBinding
 import com.digikraft.bikestation.model.bike.Feature
 import com.digikraft.bikestation.ui.adapters.StationAdapter
@@ -72,7 +70,6 @@ class StationsFragment : Fragment(), StationAdapter.ItemClickLister {
                 is Resource.Loading -> {
                     binding.progressbar.visibility = View.VISIBLE
                 }
-                else -> {}
             }
         }
     }

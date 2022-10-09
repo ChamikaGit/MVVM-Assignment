@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.digikraft.bikestation.R
 import com.digikraft.bikestation.databinding.ActivitySplashBinding
 import com.digikraft.bikestation.ui.home.MainActivity
 import dagger.hilt.android.AndroidEntryPoint

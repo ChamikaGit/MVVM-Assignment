@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Paid Project/kotlin-digikraft-assignment/digi-kraft-assignment/app/src/main/res/drawable-xxhdpi/bg_dot_layout.xml" value="0.203" />
+        <entry key="..\:/Paid Project/kotlin-digikraft-assignment/digi-kraft-assignment/app/src/main/res/drawable/ic_bike.xml" value="0.203" />
+        <entry key="..\:/Paid Project/kotlin-digikraft-assignment/digi-kraft-assignment/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Paid Project/kotlin-digikraft-assignment/digi-kraft-assignment/app/src/main/res/layout/activity_splash.xml" value="0.358695652173913" />
+        <entry key="..\:/Paid Project/kotlin-digikraft-assignment/digi-kraft-assignment/app/src/main/res/layout/fragment_details.xml" value="0.3484375" />
+        <entry key="..\:/Paid Project/kotlin-digikraft-assignment/digi-kraft-assignment/app/src/main/res/layout/fragment_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Paid Project/kotlin-digikraft-assignment/digi-kraft-assignment/app/src/main/res/layout/rv_item_layout.xml" value="0.264" />
       </map>
     </option>
   </component>

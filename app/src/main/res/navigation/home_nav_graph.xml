@@ -8,16 +8,18 @@
     <fragment
         android:id="@+id/stationsFragment"
         android:name="com.digikraft.bikestation.ui.home.StationsFragment"
-        android:label="fragment_station"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/stationsFragment_to_stationsDetailsFragment"
-            app:destination="@id/stationsDetailsFragment" />
+            app:destination="@id/stationsDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/stationsDetailsFragment"
         android:name="com.digikraft.bikestation.ui.home.StationsDetailsFragment"
-        android:label="fragment_station_details"
         tools:layout="@layout/fragment_details" >
         <argument
             android:name="feature"
