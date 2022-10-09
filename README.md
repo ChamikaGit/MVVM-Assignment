@@ -5,12 +5,12 @@ It's developed in MVVM Architcher
 
 ## Tech Stack
 
-Kotlin
-LiveData
-Dagger-Hilt Dependency Injection
-Jetpack Navigation Component
-Safe-Args
-Retrofit
-Coroutines
-Google maps
+- Kotlin
+- LiveData
+- Dagger-Hilt Dependency Injection
+- Jetpack Navigation Component
+- Safe-Args
+- Retrofit
+- Coroutines
+- Google maps
 
