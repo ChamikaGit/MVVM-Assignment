@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Bike Stations Assignment</string>
     <string name="tv_bike_station">Bike Station</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_available_bikes">Available bikes</string>
+    <string name="tv_available_places">Available Places</string>
 </resources>
