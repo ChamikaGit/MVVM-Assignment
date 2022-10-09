@@ -1,9 +1,9 @@
-# MVVM-Assignment
+## MVVM-Assignment
 
-🎥 Application that shows a list of bike station and it's bike station details.
+Application that shows a list of bike station and it's bike station details.
 It's developed in MVVM Architcher
 
-Tech Stack
+## Tech Stack
 
 Kotlin
 LiveData
